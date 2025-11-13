@@ -2,16 +2,16 @@
 #include <stdlib.h>
 
 char *proverb = "All that glisters is not good.";
-void setPointer(char *q)
+void setPointer(char **q)
 {
-     q = proverb;
+     *q = proverb;
    }
 
 
 int main(int argc, char *argv[])
 {
     char *p = "zzz";
-    setPointer(p);
+    setPointer(&p);
     printf("%s \n", p);
     
   system("PAUSE");	
